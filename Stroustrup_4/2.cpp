@@ -30,7 +30,7 @@ void print_even_positive(int * even){
 
 void print_even_reversed(int * even){
   cout << "reserved order:" << endl;
-  for(int i=0;i<50;i++){
+  for(int i=0;i<50;i++){/// start from the last element
     cout << setw(4) << even[49-i];
     if((i+1)%10==0)
       cout << endl;

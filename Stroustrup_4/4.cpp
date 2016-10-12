@@ -9,8 +9,8 @@ struct box{
      double volume;
 };
 
-void input_box(box *);
-void print_box(box);
+void input_box(box *);/// transmit location
+void print_box(box);/// transmit value
 void volume_box(box *);
 
 int main(){
@@ -22,6 +22,7 @@ int main(){
 }
 
 void input_box(box * Box){
+  /// take care of the form '->' !
   cout << "maker: ";
   cin >> Box->maker;
   cout << "height: ";

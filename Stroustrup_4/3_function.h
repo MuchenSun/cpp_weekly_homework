@@ -1,11 +1,10 @@
 #include <iostream>
-#include <iomanip>
+#include <iomanip> /// for better appearance
 using namespace std;
 
 int element_initialize(int,int);
 int factorial(int,int);
-void pascal_1();
-void pascal_2();
+/// these two functions are used in 'pascal_1()'
 
 void pascal_1(){
   for(int i=0;i<10;i++){
@@ -16,15 +15,7 @@ void pascal_1(){
   }
 }
 
-int element_initialize(int sups,int subs){
-  return sups==0 ? 1 : factorial(subs-sups+1,subs)/factorial(1,sups);
-}
-
-int factorial(int first,int last){
-  return last==first ? last : last*factorial(first,last-1);
-}
-
-void pascal_2(){
+void pascal_2(){/// based on the trialer's basic quality,more details in wikipedia-pascal's trialer-history
   int trialer[10][11] = {0};
 
   trialer[0][1] = 1;
@@ -37,4 +28,12 @@ void pascal_2(){
     }
     cout << endl << endl;
   }
+}
+
+int element_initialize(int sups,int subs){/// it's another quality,more details in wikipedia-pascal's trialer-combination
+  return sups==0 ? 1 : factorial(subs-sups+1,subs)/factorial(1,sups);
+}
+
+int factorial(int first,int last){/// first*(first+1)*(first+2)*...*last
+  return last==first ? last : last*factorial(first,last-1);
 }
