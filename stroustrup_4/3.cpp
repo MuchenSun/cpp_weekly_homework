@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "function"
+#include "3_function"
 using namespace std;
 
 int main(){
